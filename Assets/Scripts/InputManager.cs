@@ -15,22 +15,10 @@ public class InputManager : Singleton<InputManager>
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            this.player.Move(Vector3.forward);
-        }
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            this.player.Move(Vector3.back);
-        }
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-        {
-            this.player.Move(Vector3.right);
-        }
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        {
-            this.player.Move(Vector3.left);
-        }
+        Vector3 vel = Vector3.zero;
+        vel.x = Input.GetAxis("Horizontal");
+        vel.z = Input.GetAxis("Vertical");
+        this.player.UpdateVelocityValues(vel);
 
         if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
         {

@@ -12,6 +12,9 @@ ModelImporter:
     100012: Icosphere.004
     100014: Icosphere.005
     100016: Light
+    100018: Icosphere.008
+    100020: Point
+    100022: Sun
     400000: Camera
     400002: //RootNode
     400004: Icosphere.000
@@ -21,6 +24,9 @@ ModelImporter:
     400012: Icosphere.004
     400014: Icosphere.005
     400016: Light
+    400018: Icosphere.008
+    400020: Point
+    400022: Sun
     2000000: Camera
     2100000: No Name
     2100002: Material.001
@@ -32,19 +38,24 @@ ModelImporter:
     2300006: Icosphere.003
     2300008: Icosphere.004
     2300010: Icosphere.005
+    2300012: Icosphere.008
     3300000: Icosphere.000
     3300002: Icosphere.001
     3300004: Icosphere.002
     3300006: Icosphere.003
     3300008: Icosphere.004
     3300010: Icosphere.005
+    3300012: Icosphere.008
     4300000: Icosphere.001
     4300002: Icosphere.000
     4300004: Icosphere.002
     4300006: Icosphere.003
     4300008: Icosphere.004
     4300010: Icosphere.005
+    4300012: Icosphere.008
     10800000: Light
+    10800002: Point
+    10800004: Sun
   externalObjects: {}
   materials:
     importMaterials: 1
