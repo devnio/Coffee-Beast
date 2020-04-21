@@ -20,7 +20,7 @@ public class CameraFollow : Singleton<CameraFollow>
     void Start()
     {
         this.follow = true;
-        this.initOrient = Quaternion.Euler(0f, 60f, 0f) * this.transform.rotation; //this.transform.rotation;//
+        this.initOrient = Quaternion.Euler(0f, 52.5f, 0f) * this.transform.rotation; //this.transform.rotation;//
         this.orientationThreshold = 0.1f;
     }
 

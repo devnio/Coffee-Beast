@@ -27,7 +27,7 @@ public class BeanPiece : MonoBehaviour
         {
             subdivision[i].transform.position = this.transform.position;
             subdivision[i].gameObject.SetActive(true);
-            subdivision[i].ActivateAfterTime(1f);
+            subdivision[i].ActivateAfterTime(0.6f);
         }
         if (subdivision.Length > 0) ResetMe();
     }

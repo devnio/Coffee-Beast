@@ -126,6 +126,7 @@ public class SpawnManager : Singleton<SpawnManager>
         this.cartons[i].removeSpawnAfterSeconds = this.removeAfterSeconds + Random.Range(-2f, 2f);
 
         this.cartons[i].carton.transform.position = this.spawningCartonSpots[i].position;
+        this.cartons[i].carton.transform.rotation = this.spawningCartonSpots[i].rotation;
         this.cartonLoaders[i].Reset(0f, this.cartons[i].removeSpawnAfterSeconds, true, true);
     }
 

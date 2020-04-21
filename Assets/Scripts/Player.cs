@@ -70,6 +70,7 @@ public class Player : MonoBehaviour
         }
 
         this.transform.Translate(inputVel * this.velSpeed * Time.deltaTime, Space.World);
+        this.rb.velocity = Vector3.zero;
     }
 
     public void UpdateVelocityValues(Vector3 vel)
@@ -84,17 +85,18 @@ public class Player : MonoBehaviour
 
     private void CarryObject(Transform t)
     {
+        t.rotation = this.objectSpot.rotation;
         t.position = this.objectSpot.position; 
         t.SetParent(this.objectSpot);
     }
 
     public void Interact()
     {
-        if (this.isInCartonZone  && (this.isCarryingCartonId == -1) && (this.carryingBean==null))
+        if (this.isInCartonZone  && (this.isCarryingCartonId == -1) && (this.carryingBean==null) && (this.Cup==null))
         {
             TakeCarton();
         }
-        if (this.isInBeansZone && (this.carryingBean==null))
+        if (this.isInBeansZone && (this.carryingBean==null) && (this.Cup==null))
         {
             if (this.isCarryingCartonId != -1)
             {
@@ -106,7 +108,7 @@ public class Player : MonoBehaviour
                 TakeBean();
             }
         }
-        if (this.isInSmashZone && (this.carryingBean != null))
+        if (this.isInSmashZone && (this.carryingBean != null) & (this.Cup == null))
         {
             // Smash the bean
             if (!this.smashMode)

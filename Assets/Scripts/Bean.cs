@@ -39,14 +39,16 @@ public class Bean : MonoBehaviour
         for(int i = 0; i < pieces.Length; i++)
         {
             pieces[i].gameObject.SetActive(true);
-            pieces[i].ActivateAfterTime(1f);
+            pieces[i].ActivateAfterTime(0.6f);
         }
     }
 
     public void ShootBean(Transform transform, bool addForce = true)
     {
         this.rb.useGravity = true;
+        this.rb.isKinematic = false;
         this.gameObject.SetActive(true);
+        this.transform.GetChild(0).gameObject.SetActive(true);
         this.transform.position = transform.position;
         this.transform.parent = null;
         if (addForce) rb.AddForce(new Vector3(1f, -1f, -1f) * spawnForce, ForceMode.Impulse);
