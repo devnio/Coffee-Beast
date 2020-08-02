@@ -14,7 +14,7 @@ There are 5 steps for preparing a coffee:
 [4] Go to the coffee machine and prepare coffee
 [5] Finally bring the coffee to the coffee beast.
 
-![coffe beast](coffe_beast.jpg)
+![coffe beast](Assets/coffee_beast.jpg)
 
 # Final
 All the 3d assets were made using Blender and the entire game was made using Unity.
